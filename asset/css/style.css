@@ -1,7 +1,14 @@
+/* reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* utility */
+
+.c-white {
+    color: white;
 }
 
 /* header */
@@ -69,12 +76,23 @@ footer{
 }
 
 .footer-left{
-    background-color: green;
+    /* background-color: green; */
     display: flex;
+    align-items: center;
 }
 
-.footer-left img{
-    width: 50px;
+.f-l-left img{
+    width: 40px;
+    margin: 0 10px;
+}
+
+.f-l-center{
+    color: white;
+    margin-right: 20px;
+}
+
+.f-l-right{
+    color: rgb(99, 99, 99);
 }
 
 .footer-center{
