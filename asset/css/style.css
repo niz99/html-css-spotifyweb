@@ -45,6 +45,7 @@ aside{
 
 aside .img-aside{
    width: 70%;
+   margin-left: 10px;
 }
 
 #download-aside{
@@ -63,4 +64,23 @@ main{
 footer{
     height: 10vh;
     background-color: rgb(30, 30, 30);
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-left{
+    background-color: green;
+    display: flex;
+}
+
+.footer-left img{
+    width: 50px;
+}
+
+.footer-center{
+    background-color: yellow;
+}
+
+.footer-right{
+    background-color: red;
 }
