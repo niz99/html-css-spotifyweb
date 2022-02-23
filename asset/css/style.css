@@ -82,6 +82,23 @@ aside .side-bottom .profile {
 main{
     height: calc(100vh - 10vh);
     background-color: rgb(16, 19, 26);
+    margin-left: 50px;
+    overflow-y: auto;
+}
+
+.main-nav{
+    margin-top: 60px;
+    display: flex;
+    font-size: small;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.main-nav h3{
+    padding: 10px;
+    text-transform: uppercase;
+    color: rgb(104, 106, 111);
+    font-size: small;
 }
 
 /* footer */
