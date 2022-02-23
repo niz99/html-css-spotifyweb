@@ -109,6 +109,10 @@ main{
 
     /* section */
 
+section{
+    margin-bottom: 20px;
+}
+
 section h2{
     color: white;
     padding: 20px 0;
@@ -142,6 +146,45 @@ section p{
 
 .card span{
     color: rgb(104, 106, 111);
+}
+
+.container-bottom-card{
+    display: inline-block;
+
+}
+
+.bottom-card-rey{ 
+    background-image: url('./../img/youg.jpeg');  
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.bottom-card-einaudi{ 
+    background-image: url('./../img/einaudi.jpeg');  
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.einaudi{
+    background-image: url('./../img/einaudi.jpeg');
+}
+
+.container-bottom-card h3{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
 }
 
 /* footer */
