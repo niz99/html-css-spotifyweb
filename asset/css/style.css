@@ -119,7 +119,7 @@ section p{
 
 }
 
-.first-content{
+.content{
     display: flex;
     flex-wrap: wrap;
 }
