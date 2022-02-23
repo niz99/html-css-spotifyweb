@@ -11,6 +11,10 @@
     color: white;
 }
 
+body{
+    background-color: rgb(16, 19, 26);
+}
+
 /* header */
 
 header{
@@ -82,12 +86,14 @@ aside .side-bottom .profile {
 main{
     height: calc(100vh - 10vh);
     background-color: rgb(16, 19, 26);
-    margin-left: 50px;
+    margin-left: 60px;
     overflow-y: auto;
 }
 
+    /* main-nav */
+
 .main-nav{
-    margin-top: 60px;
+    margin-top: 100px;
     display: flex;
     font-size: small;
     flex-wrap: wrap;
@@ -99,6 +105,43 @@ main{
     text-transform: uppercase;
     color: rgb(104, 106, 111);
     font-size: small;
+}
+
+    /* section */
+
+section h2{
+    color: white;
+    padding: 20px 0;
+}
+
+section p{
+    color: rgb(104, 106, 111);
+
+}
+
+.first-content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(100% / 2);
+    align-items: center;
+}
+
+.card img{
+    width: 150px;
+    margin: 10px 0;
+}
+
+.card h3{
+    color: white;
+}
+
+.card span{
+    color: rgb(104, 106, 111);
 }
 
 /* footer */
