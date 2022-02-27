@@ -1,216 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./asset/css/style-dispositivi.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="img/favicon.ico">
     <title>Spotify</title>
 </head>
+
 <body>
 
-    <header>
+    <!-- container di tutta la webapp -->
+    <div class="web-app">
 
-        <div class="upgrade">
-            <span>effettua l'upgrade</span>
-        </div>
+        <!-- schermata al di sopra del footer -->
+        <div class="webapp-top">
 
-    </header>
+            <!-- barra laterale di sinistra -->
+            <div class="sidebar">
 
-    <aside>
+                <div class="side-1">
 
-        <div class="side-up">
-                <img class="img-aside" src="./asset/img/logo-small.svg" alt="">
-                <img class="img-aside" src="./asset/img/home.svg" alt="">
-                <img class="img-aside" src="./asset/img/search.svg" alt="">
-                <img class="img-aside" src="./asset/img/libreria.svg" alt="">
-        </div>
+                    <!-- logo di spotify -->
+                    <div>
+                        <img class="logo-desk" src="./asset/img/logo.svg" alt="logospoty">
+                        <img class="logo-smart" src="./asset/img/logo-small.svg" alt="logospotyno">
+                    </div>
 
-        <div class="side-bottom">
-                <img id="download-aside" src="./asset/img/download.svg" alt="">
-                <img class="img-aside profile" src="./asset/img/profile.svg" alt="">
-        </div>
-        
-    </aside>
+                    <!-- lista con i loghi -->
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <img src="./asset/img/home.svg" alt="">
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <img src="./asset/img/search.svg" alt="">
+                                <a href="#">Cerca</a>
+                            </li>
+                            <li>
+                                <img src="./asset/img/libreria.svg" alt="">
+                                <a href="#">La tua libreria</a>
+                            </li>
+                        </ul>
+                    </div>
 
-    <main>
+                    <!-- lista della playlist -->
+                    <div class="list">
+                        <h3>Playlist</h3>
+                        <div class="playlist-btn"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                        <span class="playlist">
+                            Crea Playlist
+                        </span>
+                        <div class="scroll">
+                            <ul>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                            </ul>
+                        </div>
+                    </div>
 
-        <div class="main-nav">
-
-            <h3>in evidenza</h3>
-            <h3>podcast</h3>
-            <h3>classifiche</h3>
-            <h3>generi e mood</h3>
-            <h3>nuove uscite</h3>
-            <h3>scopri</h3>
-
-        </div>
-
-        <section>
-
-            <h2>Recently played</h2>
-
-            <div class="content">
-
-                <div class="card">
-                    <img src="./asset/img/metal_lifting.jpg" alt="">
-                    <h3>Heavy Metal</h3>
-                    <span>Subtitle</span>
                 </div>
 
-                <div class="card">
-                    <img src="./asset/img/stranger.jpeg" alt="">
-                    <h3>Stranger Things, Vol.1 (a Netflix Original Series Soundtrack</h3>
-                    <span>Kyle Dixon & Michael Stein</span>
-                </div>
+                <div class="side-2">
 
-                <div class="card">
-                    <img src="./asset/img/aquietplace.jpeg" alt="">
-                    <h3>A quite place</h3>
-                    <span>Subtitle</span>
-                </div>
+                    <div class="download">
+                        <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
+                        <span>Installa App</span>
+                    </div>
 
-                <div class="card">
-                    <img src="./asset/img/split.jpeg" alt="">
-                    <h3>Split</h3>
-                    <span>Subtitle</span>
-                </div>
+                    <div class="profile">
+                        <img src="./asset/img/profile.svg" alt="immagineprofilo">
+                        <span>John Doe</span>
+                    </div>
 
-                <div class="card">
-                    <img src="./asset/img/cure.jpeg" alt="">
-                    <h3>A cure for wellness</h3>
-                    <span>Subtitle</span>
-                </div>
-
-                <div class="card">
-                    <img src="./asset/img/sinister.jpeg" alt="">
-                    <h3>Sinister</h3>
-                    <span>Subtitle</span>
                 </div>
 
             </div>
 
-        </section>
+            <!-- barra in alto fixata -->
+            <div class="fix-upgrade">
+                <button class="upgrade">
+                    effettua l'upgrade
+                </button>
+            </div>
 
-        <section>
+            <!-- main centrale con gli album -->
+            <div class="main-album">
 
-            <h2>Creato per John Doe</h2>
-            <p>Più ascolti, più saranno accurati i suggerimenti</p>
-
-            <div class="content">
-
-                <div class="card">
-                    <img src="./asset/img/radar.jpeg" alt="">
-                    <h3>Release Radar</h3>
+                <!-- lista menu in alto -->
+                <div class="bar-nav">
+                    <ul>
+                        <li><a href="#">in evidenza</a></li>
+                        <li><a href="#">podcast</a></li>
+                        <li><a href="#">classifiche</a></li>
+                        <li><a href="#">generi e mood</a></li>
+                        <li><a href="#">nuove uscite</a></li>
+                        <li><a href="#">scopri</a></li>
+                    </ul>
                 </div>
 
-                <div class="card">
-                    <img src="./asset/img/mixdaily.jpeg" alt="">
-                    <h3>Daily Mix 1</h3>
+                <!-- schede degli album recenti -->
+                <div class="title">
+                    <h2>Recently played</h2>
+                </div>
+
+                <div class="musicpedia">
+
+                    <!-- prima scheda album metal -->
+                    <div class="card">
+                        <div class="cover">
+                            <div class="ghosty">
+                                <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                            </div>
+                            <img src="./asset/img/metal_lifting.jpg" alt="">
+                        </div>
+                        <h3>Heavy metal</h3>
+                        <p class="sub">Subtitle</p>
+                    </div>
+
+                    <!-- seconda scheda stranger -->
+                    <div class="card">
+                        <div class="cover">
+                            <div class="ghosty">
+                                <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                            </div>
+                            <img src="./asset/img/stranger.jpeg" alt="">
+                        </div>
+                        <h3>Stranger Things, vol.1 (a Netflix original series soundtrack)</h3>
+                        <p class="sub">Kyle Dixon &amp; Michael Stein</p>
+                    </div>
+
+                    <!-- terza scheda stranger -->
+                    <div class="card">
+                        <div class="cover">
+                            <div class="ghosty">
+                                <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                            </div>
+                            <img src="./asset/img/aquietplace.jpeg" alt="">
+                        </div>
+                        <h3>A Quiet Place</h3>
+                        <p class="sub">Subtitle</p>
+                    </div>
+
+                    <!-- quarta scheda split -->
+                    <div class="card">
+                        <div class="cover">
+                            <div class="ghosty">
+                                <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                            </div>
+                            <img src="./asset/img/split.jpeg" alt="">
+                        </div>
+                        <h3>Split</h3>
+                        <p class="sub">Subtitle</p>
+                    </div>
+
+                    <!-- quinta scheda bottiglia -->
+                    <div class="card">
+                        <div class="cover">
+                            <div class="ghosty">
+                                <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                            </div>
+                            <img src="./asset/img/cure.jpeg" alt="">
+                        </div>
+                        <h3>A cure for wellness</h3>
+                        <p class="sub">Subtitle</p>
+                    </div>
+
+                    <!-- quinta scheda bottiglia -->
+                    <div class="card">
+                        <div class="cover">
+                            <div class="ghosty">
+                                <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                            </div>
+                            <img src="./asset/img/sinister.jpeg" alt="">
+                        </div>
+                        <h3>Sinister</h3>
+                        <p class="sub">Subtitle</p>
+                    </div>
+
+                </div>
+
+                <!-- schede degli album creati -->
+                <div class="title">
+                    <h2>Creato per John Doe</h2>
+                    <p>Più ascolti, più saranno accurati i suggerimenti</p>
+                </div>
+
+                <div class="musicpedia">
+
+                    <!-- prima scheda radar -->
+                    <div class="card">
+                        <div class="cover">
+                            <div class="ghosty">
+                                <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                            </div>
+                            <img src="./asset/img/radar.jpeg" alt="">
+                        </div>
+                        <h3>Release radar</h3>
+                    </div>
+
+                    <!-- seconda scheda daily mix -->
+                    <div class="card">
+                        <div class="cover">
+                            <div class="ghosty">
+                                <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                            </div>
+                            <img src="./asset/img/mixdaily.jpeg" alt="">
+                        </div>
+                        <h3>Daily Mix 1</h3>
+                    </div>
+
+                </div>
+
+                <!-- schede degli artisti popolari -->
+                <div class="title">
+                    <h2>Artisti più popolari</h2>
+                    <p>Più ascolti, più saranno accurati i suggerimenti</p>
+                </div>
+
+                <div class="musicpedia">
+
+                    <!-- prima scheda lana del ray -->
+                    <div class="card">
+                        <div class="cover">
+                            <div class="ghosty circle">
+                                <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                            </div>
+                            <img src="./asset/img/youg.jpeg" class="circle" alt="">
+                        </div>
+                        <h3>Lana Del Ray</h3>
+                    </div>
+
+                    <!-- seconda scheda einaudi -->
+                    <div class="card">
+                        <div class="cover">
+                            <div class="ghosty circle">
+                                <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                            </div>
+                            <img src="./asset/img/einaudi.jpeg" class="circle" alt="">
+                        </div>
+                        <h3>Ludovico Einaudi</h3>
+                    </div>
+
                 </div>
 
             </div>
 
-        </section>
+        </div>
 
-        <section>
+        <!-- footer in basso con bottoni -->
+        <div class="webapp-bottom">
 
-            <h2>Artisti più popolari</h2>
-            <p>Più ascolti, più saranno accurati i suggerimenti</p>
+            <!-- sezione a sinistra con foto album -->
+            <div class="player-left">
 
-            <div class="container-bottom-card">
-                <div class="bottom-card-rey"></div>
-                <h3>Lana Del Rey</h3>
-            </div>
-
-            <div class="container-bottom-card">
-                <div class="bottom-card-einaudi"></div>
-                <h3>Ludovico Einaudi</h3>
-            </div>
-
-        </section>
-
-    </main>
-
-    <footer>
-
-        <div class="footer-left">
-
-            <div class="f-l-left">
                 <img src="./asset/img/sinister.jpeg" alt="">
+                <div class="song-title">
+                    <h4>Sinister</h4>
+                    <p>Brano Nome</p>
+                </div>
+                <div class="player-loghi">
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    <i class="fa fa-folder-o" aria-hidden="true"></i>
+                </div>
+
             </div>
 
-            <div class="f-l-center">
-                <h4>Sinister</h4>
-                <p>Brano</p>
-                <p>Nome</p>
+            <!-- sezione centrale col play e barra -->
+            <div class="player-menu">
+
+                <!-- bottoni in alto -->
+                <div class="player-btn">
+                    <ul class="btn-flex">
+                        <li>
+                            <i class="fa fa-random"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-step-backward" aria-hidden="true"></i>
+                        </li>
+                        <li class="btn-big">
+                            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-step-forward" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-repeat" aria-hidden="true"></i>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- barra del tempo del brano -->
+                <div class="player-time">
+
+                    <span>0:25</span>
+
+                    <div class="volume-bar">
+
+                        <div class="volume-line">
+                            <div class="volume-line-yellow"></div>
+                            <div class="volume-pointer"></div>
+                        </div>
+
+                    </div>
+
+                    <span>4:35</span>
+
+                </div>
+
             </div>
 
-            <div class="f-l-right">
-                <i class="fa-regular fa-heart"></i> <br>
-                <i class="fa-regular fa-folder"></i>
+            <!-- sezione di destra con volume -->
+            <div class="player-right">
+
+                <i class="fa fa-list-ul" aria-hidden="true"></i>
+                <i class="fa fa-desktop" aria-hidden="true"></i>
+                <i class="fa fa-volume-up" aria-hidden="true"></i>
+
+                <div class="volume-bar">
+                    <div class="volume-line">
+                        <div class="volume-line-yellow"></div>
+                        <div class="volume-pointer"></div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
 
-        <div class="footer-center">
+    </div>
 
-            <div class="f-c-up">
-
-                <div>
-                    <i class="fa-solid fa-shuffle"></i>
-                </div>
-                <div>
-                    <i class="fa-solid fa-backward-step"></i>
-                </div>
-                <div>
-                    <i class="fa-solid fa-circle-play"></i>
-                </div>
-                <div>
-                    <i class="fa-solid fa-forward-step"></i>
-                </div>
-                <div>
-                    <i class="fa-solid fa-rotate-right"></i>
-                </div>
-
-            </div>
-
-            <div class="f-c-bottom">
-
-                <div class="minute">0:25</div>
-
-                <div class="music-bar">
-                    <div class="music-bar-level"></div>
-                </div>
-
-                <div class="minute">4:35</div>
-
-            </div>
-        
-        </div>
-
-        <div class="footer-right">
-            
-            <div>
-                <i class="fa-solid fa-list"></i>
-            </div>
-
-            <div>
-                <i class="fa-solid fa-desktop"></i>
-            </div>
-
-            <div>
-                <i class="fa-solid fa-volume-high"></i>
-            </div>
-
-            <div class="volume-bar">
-                <div class="volume-bar-level"></div>
-            </div>
-            
-        </div>
-
-    </footer>
-    
 </body>
+
 </html>

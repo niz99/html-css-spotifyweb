@@ -5,289 +5,451 @@
     box-sizing: border-box;
 }
 
-/* utility */
 
-.c-white {
-    color: white;
+
+
+
+/* lista dei div container */
+
+.web-app {
+    background-color: black;
+    height: 100vh;
 }
 
-body{
-    background-color: rgb(16, 19, 26);
+.webapp-top {
+    display: flex;
+    overflow-y: hidden;
 }
 
-/* header */
+.webapp-bottom {
+    width: 100vw;
+    height: 100px;
+    background-color: #282828;
+    display: flex;
+}
 
-header{
-    height: 10vh;
+.sidebar {
+    width: 230px;
+    height: calc(100vh - 100px);
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fix-upgrade {
     position: fixed;
     top: 0;
     right: 0;
-    left: 0;
-    background-color: rgba(9, 11, 15, 0.5);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    /* opacity: 0.2; */
+    z-index: 2;
+    width: calc(100vw - 230px);
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-header .upgrade{
-    text-transform: uppercase;
-    border: 1px solid white;
-    border-radius: 20px;
-    padding: 10px 20px;
-    margin-right: 10px;
-    color: white;
-    font-size: 0.8em;
-}
-
-/* aside */
-
-aside{
-    height: 90vh;
-    width: 50px;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-aside .side-up{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-aside .img-aside{
-   width: 70%;
-   margin: 5px 0;
-}
-
-aside .side-bottom{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#download-aside{
-    width: 40%;
-    margin-bottom: 15px;
-}
-
-aside .side-bottom .profile {
-    background-color: gray;
-    border-radius: 50%;
-}
-
-/* main */
-
-main{
-    height: calc(100vh - 10vh);
-    background-color: rgb(16, 19, 26);
-    margin-left: 60px;
+.main-album {
+    width: calc(100vw - 230px);
+    height: calc(100vh - 100px);
+    background-color: #141922;
     overflow-y: auto;
 }
 
-    /* main-nav */
 
-.main-nav{
-    margin-top: 100px;
-    display: flex;
-    font-size: small;
-    flex-wrap: wrap;
-    justify-content: space-around;
+
+
+
+/* barra laterale di sinistra */
+
+.side-2 {
+    width: calc(100% - 20px);
+    color: #717171;
+    margin-left: 20px;
 }
 
-.main-nav h3{
-    padding: 10px;
-    text-transform: uppercase;
-    color: rgb(104, 106, 111);
-    font-size: small;
+.logo-desk {
+    display: block;
+    width: 130px;
+    margin: 20px 20px;
 }
 
-    /* section */
-
-section{
-    margin-bottom: 20px;
+.logo-smart {
+    display: none;
+}
+  
+.list {
+    width: 100%;
+    color: #717171;
+    padding: 20px 20px;
 }
 
-section h2{
-    color: white;
-    padding: 20px 0;
-}
-
-section p{
-    color: rgb(104, 106, 111);
-
-}
-
-.content{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.card{
-    display: flex;
-    flex-direction: column;
-    flex-basis: calc(100% / 2);
-    align-items: center;
-}
-
-.card img{
-    width: 150px;
-    margin: 10px 0;
-}
-
-.card h3{
+.list li:hover {
+    cursor: pointer;
     color: white;
 }
 
-.card span{
-    color: rgb(104, 106, 111);
+.scroll {
+    height: 40vh;
+    overflow-y: auto;
+}
+  
+.list ul {
+    list-style: none;
 }
 
-.container-bottom-card{
+.list li {
+    margin:  15px 0;
+}
+
+.list img {
+    width: 20px;
+    height: 22px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.list a {
+    text-decoration: none;
+    color: inherit;
+    vertical-align: middle;
+}
+
+.playlist-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #a3a3a3;
     display: inline-block;
-
-}
-
-.bottom-card-rey{ 
-    background-image: url('./../img/youg.jpeg');  
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
     margin-right: 10px;
-    margin-top: 10px;
-}
-
-.bottom-card-einaudi{ 
-    background-image: url('./../img/einaudi.jpeg');  
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-right: 10px;
-    margin-top: 10px;
-}
-
-.einaudi{
-    background-image: url('./../img/einaudi.jpeg');
-}
-
-.container-bottom-card h3{
-    color: white;
-    text-align: center;
-    margin-top: 10px;
-}
-
-/* footer */
-
-footer{
-    height: 10vh;
-    background-color: rgb(30, 30, 30);
-    display: flex;
-    justify-content: space-between;
-}
-
-    /* footer-left */
-
-.footer-left{
-    display: flex;
-    align-items: center;
-    flex-basis: calc((100% / 3) - 10px);
-}
-
-.f-l-left img{
-    width: 30px;
-    margin: 0 10px;
-}
-
-.f-l-center{
-    color: rgb(99, 99, 99);
-    margin-right: 10px;
-    font-size: smaller;
-}
-
-.f-l-center h4{
-    color: white;
-}
-
-.f-l-right{
-    color: rgb(99, 99, 99);
-}
-
-    /* footer-center */
-
-.footer-center{
-    flex-basis: calc(100% / 3);
-    margin: 0 20px;
-}
-
-.f-c-up{
-    display: flex;
-    justify-content: space-around;
-    color: white;
     margin-top: 15px;
+    padding-top: 8px;
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    vertical-align: baseline;
 }
 
-.f-c-bottom{
-    display: flex;
+.profile::before {
+    content: "";
+    height: 1px;
+    width: 190px;
+    background-color: #a3a3a3;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
-.f-c-bottom .minute{
-    align-self: center;
+.profile img {
+   height: 25px;
+   width: 25px;
+   background-color: #808080;
+   border-radius: 50%;
+   vertical-align: middle;
+   margin-bottom: 5px;
+}
+
+.profile span {
+   color: white;
+}
+
+.download span:hover {
     color: white;
-    font-size: small;
-    padding: 5px;
+    cursor: pointer;
 }
 
-.music-bar{
-    background-color: rgb(72, 72, 72);
-    height: 3px;
-    width: 70%;
-    margin: 20px auto;
-    border-radius: 10px;
+
+
+
+
+/* barra in alto fixata */
+
+.upgrade {
+    width: 200px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background-color: transparent;
 }
 
-.music-bar-level{
-    background-color: rgb(181, 181, 181);
-    height: 3px;
-    width: 30%;
-    border-radius: 10px;
+.upgrade:hover {
+    transform: scale(1.1);
 }
 
-    /* footer-right */
 
-.footer-right{
-    flex-basis: calc((100% / 3) - 10px);
+
+
+
+/* main centrale con gli album */
+
+/* lista menu in alto */
+
+.bar-nav {
+    margin-top: 120px;
+}
+
+.bar-nav ul {
+    text-align: center;
+}
+
+.bar-nav li {
+    display:inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 10px;
+    position: relative;
+}
+
+.bar-nav li > a {
+    color: #64676D;
+    text-decoration: none;
+}
+
+.bar-nav a::after {
+    content: "";
+    height: 2px;
+    width: 40px;
+    background-color: yellow;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.bar-nav a:hover::after {
+    display: block;
+}
+
+.bar-nav a:hover {
+    color: white;
+}
+
+
+
+.title {
+    margin: 20px;
+    color: #fff;
+}
+
+
+
+/* schede degli album  */
+.musicpedia {
     display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+
+.card {
+    text-align: center;
+    color: #fff;
+    width: calc(100% / 6 - 20px);
+    margin-right: 20px;
+}
+  
+.cover {
+    position: relative;
+}
+  
+.cover i {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 70px;
+}
+  
+.cover img {
+    width: 100%;
+}
+
+.ghosty {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cover:hover .ghosty {
+    display: block;
+    cursor: pointer;
+}
+
+.sub {
+    color: #6D7075;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.title p {
+    color: #6D7075;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+
+
+
+
+
+/* footer in basso con bottoni */
+.player-left, .player-right {
     align-items: center;
-    justify-content: flex-end;
+    width: 230px;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.player-menu {
+    width: calc(100% - 460px);
+    height: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+
+
+/* sezione a sinistra con foto album */
+.player-left img {
+    width: 42px;
+    height: 42px;
+    margin-left: 20px;
+}
+
+.song-title h4 {
+    margin: 5px;
+}
+
+.song-title p {
+    color: #6D7075;
+    font-size: 15px;
+    margin: 5px;
+}
+
+.player-loghi {
+    margin-left: 25px;
+    color: #6D7075;
+}
+
+.player-left i {
     margin-right: 10px;
 }
 
-.volume-bar{
-    background-color: rgb(72, 72, 72);
-    height: 3px;
-    width: 40%;
-    border-radius: 10px;
-}
-
-.volume-bar-level{
-    background-color: rgb(181, 181, 181);
-    height: 3px;
-    width: 30%;
-    border-radius: 10px;
-}
-
-.footer-right i{
+.song-title p:hover {
     color: white;
-    padding: 0 5px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.player-loghi i:hover {
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+/* sezione centrale col play e barra */
+.btn-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.player-btn ul {
+    justify-content: center;
+    align-items: center;
+}
+
+.player-btn li {
+    list-style-type: none;
+    padding: 0 15px ;
+    padding-top: 15px;
+    font-size: 18px;
+}
+
+li.btn-big {
+    font-size: 32px;
+}
+
+li.btn-big:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.player-time span {
+    font-size: 12px;
+}
+
+
+
+
+
+/* sezione di destra con volume */
+.player-right i {
+    margin-right: 10px;
+}
+
+.volume-bar {
+    width: 50%;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #5a5a5a;
+    margin: 0 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.volume-line {
+    height: inherit;
+    width: 60%;
+    border-radius: 3px;
+    background-color: #fff;
+    position: relative;
+} 
+
+.volume-line-yellow {
+    height: inherit;
+    width: 100%;
+    border-radius: 3px;
+    background-color: rgb(81, 255, 0);
+    position: relative;
+    display: none;
+}
+
+.volume-pointer {
+    display: none;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    transform: translate(50%,-50%);
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.volume-bar:hover .volume-pointer {
+    display: block;
+    cursor: pointer;
+}
+
+.volume-bar:hover .volume-line-yellow {
+    display: block;
+    cursor: pointer;
 }
